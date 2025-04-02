@@ -3,22 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guido Blog</title>
+    <title>Ferrari - The Iconic Supercar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(45deg, #ff8000, #ffcc00);
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .intro {
+            padding: 20px;
+            font-size: 1.2em;
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .car-card {
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s, opacity 0.5s ease-in-out;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        .car-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .car-card p {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .car-card:hover {
+            transform: scale(1.1);
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            background: linear-gradient(45deg, #ff8000, #ffcc00);
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".car-card");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1 style="text-align: center;">Welcome to My Blog</h1>
-    <hr>
-    <div style="text-align: center;">
-        <a href="#">Home</a> | 
-        <a href="#">About</a> | 
-        <a href="#">Contact</a>
-    </div>
-    <hr>
-    <h2>Blog Post Title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt nisi vel libero elementum, a vulputate purus bibendum.</p>
-    <h3>About Me</h3>
-    <p>Hi, I’m Edwin! Welcome to my blog where I share my journey and thoughts.</p>
-    <hr>
-    <p style="text-align: center;">&copy; 2025 Edwin's Blog. All rights reserved.</p>
+    <header>
+        <h1>Ferrari - The Iconic Supercar</h1>
+    </header>
+    
+    <section class="intro">
+        <h2>Unleashing Speed and Elegance</h2>
+        <p>Ferrari has long been the epitome of speed, luxury, and engineering excellence. From Formula 1 dominance to stunning road cars, Ferrari is the dream of car enthusiasts worldwide.</p>
+    </section>
+    
+    <section class="gallery">
+        <div class="car-card">
+            <img src="https://source.unsplash.com/500x300/?ferrari,car" alt="Ferrari Model 1">
+            <p>Ferrari LaFerrari - Hybrid Hypercar with Unparalleled Performance.</p>
+        </div>
+        <div class="car-card">
+            <img src="https://source.unsplash.com/500x300/?ferrari,sports" alt="Ferrari Model 2">
+            <p>Ferrari F8 Tributo - A tribute to Ferrari's powerful V8 heritage.</p>
+        </div>
+        <div class="car-card">
+            <img src="https://source.unsplash.com/500x300/?ferrari,supercar" alt="Ferrari Model 3">
+            <p>Ferrari 488 Pista - The ultimate track-focused Ferrari.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Ferrari Blog | Designed with Passion</p>
+    </footer>
 </body>
 </html>
