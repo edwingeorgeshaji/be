@@ -4,19 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amal Jyothi College of Engineering</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(45deg, #0056b3, #0099ff);
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #0056b3;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #0099ff;
+            border-radius: 5px;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0099ff;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #eef;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        ul li:hover {
+            background: #0099ff;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            background: #0056b3;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #eef; color: #333;">
-    <h1 style="text-align: center; color: #0056b3;">Welcome to Amal Jyothi College of Engineering</h1>
-    <hr>
-    <div style="text-align: center;">
-        <a href="https://www.amaljyothi.ac.in" target="_blank">About Us</a> | 
-        <a href="https://www.ajce.in/home/index.html" target="_blank">Courses</a> | 
-        <a href="https://www.ajce.in/home/index.html" target="_blank">Departments</a> | 
-        <a href="https://www.ajce.in/home/index.html" target="_blank">Faculty</a> | 
-        <a href="https://www.ajce.in/lib/index.html" target="_blank">Library</a> | 
+<body>
+    <header>
+        <img src="https://www.ajce.in/300x300png.png" alt="AJCE Logo">
+        Amal Jyothi College of Engineering
+    </header>
+    
+    <nav>
+        <a href="https://www.amaljyothi.ac.in" target="_blank">About Us</a>
+        <a href="https://www.ajce.in/home/index.html" target="_blank">Courses</a>
+        <a href="https://www.ajce.in/home/index.html" target="_blank">Departments</a>
+        <a href="https://www.ajce.in/home/index.html" target="_blank">Faculty</a>
+        <a href="https://www.ajce.in/lib/index.html" target="_blank">Library</a>
         <a href="https://www.ajce.in/home/index.html" target="_blank">Contact</a>
-    </div>
-    <hr>
+    </nav>
 
     <section id="about">
         <h2>About Amal Jyothi College of Engineering</h2>
@@ -66,7 +155,8 @@
         <p>Website: <a href="https://www.amaljyothi.ac.in" target="_blank">www.amaljyothi.ac.in</a></p>
     </section>
 
-    <hr>
-    <p style="text-align: center;">&copy; 2025 Amal Jyothi College of Engineering. Built by <a href="https://linktr.ee/edwingeorge_007">R.E.C</a>.</p>
+    <footer>
+        <p>&copy; 2025 Amal Jyothi College of Engineering. Built by <a href="https://linktr.ee/edwingeorge_007">R.E.C</a>.</p>
+    </footer>
 </body>
 </html>
